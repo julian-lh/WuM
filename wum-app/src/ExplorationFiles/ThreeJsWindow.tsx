@@ -2,14 +2,18 @@ import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 
-function Box(props: JSX.IntrinsicElements['mesh']) {
+type BoxProps = { direction: boolean }
+
+function Box({ direction, ...props }: BoxProps & JSX.IntrinsicElements['mesh']) {
+    // function Box(direction: boolean, ...props: JSX.IntrinsicElements['mesh'][]) {
+    // function Box({ direction, props }: (boolean | JSX.IntrinsicElements['mesh'])) {
     // This reference will give us direct access to the THREE.Mesh object
     const ref = useRef<THREE.Mesh>(null!)
     // Hold state for hovered and clicked events
     const [hovered, hover] = useState(false)
     const [clicked, click] = useState(false)
     // Rotate mesh every frame, this is outside of React without overhead
-    useFrame((state, delta) => (ref.current.rotation.x += 0.01))
+    useFrame((state, delta) => (ref.current.rotation.x += 0.01 * (direction ? 1 : -1)))
 
     return (
         <mesh
@@ -26,14 +30,20 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
     )
 }
 
+
 export default function ThreeJsWindow() {
-    return (
+
+    const [direction, inverseDirection] = useState(false);
+
+    return (<>
         <Canvas>
             <ambientLight intensity={0.5} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
             <pointLight position={[-10, -10, -10]} />
-            < Box position={[-1.2, 0, 0]} />
-            <Box position={[1.2, 0, 0]} />
+            <Box direction={direction} position={[-1.2, 0, 0]} />
+            <Box direction={direction} position={[1.2, 0, 0]} />
         </Canvas>
+        <button onClick={() => inverseDirection(!direction)}>Change Cubes</button>
+    </>
     )
 }
