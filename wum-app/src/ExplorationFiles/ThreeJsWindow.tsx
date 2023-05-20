@@ -2,11 +2,8 @@ import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 
-type BoxProps = { direction: boolean }
+function Box({ direction, ...props }: { direction: boolean } & JSX.IntrinsicElements['mesh']) {
 
-function Box({ direction, ...props }: BoxProps & JSX.IntrinsicElements['mesh']) {
-    // function Box(direction: boolean, ...props: JSX.IntrinsicElements['mesh'][]) {
-    // function Box({ direction, props }: (boolean | JSX.IntrinsicElements['mesh'])) {
     // This reference will give us direct access to the THREE.Mesh object
     const ref = useRef<THREE.Mesh>(null!)
     // Hold state for hovered and clicked events
