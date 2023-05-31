@@ -24,6 +24,7 @@ const Impressum = () => {
                 <Text color='white'>Medieninformatik - TH Lübeck</Text>
                 <Text color='white'>Sommersemester 2023</Text>
             </div>
+
             <Spacer />
         </Container>
     );

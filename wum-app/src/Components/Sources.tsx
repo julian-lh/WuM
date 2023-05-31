@@ -5,22 +5,28 @@ export default function Sources() {
 
     const sources = [
         {
-            authors: 'Doe, J., Smith, A.',
-            title: 'The Title of the Paper',
-            journal: 'Journal of Example',
-            volume: '10',
-            number: '2',
-            pages: '123-135',
-            year: '2022',
+            authors: 'Goldstein, E.B.',
+            title: 'Wahrnehmungspsychologie',
+            journal: 'Spektrum Akademischer Verlag',
+            year: '1997',
         },
         {
-            authors: 'Brown, C.',
-            title: 'Another Paper',
-            journal: 'Conference on Sample',
-            volume: '',
-            number: '',
-            pages: '45-53',
-            year: '2021',
+            authors: 'Lukas, J',
+            title: 'Psychophysik der Raumwahrnehmung',
+            journal: 'Psychologie Verlags Union',
+            year: '1996',
+        },
+        {
+            authors: 'Niederee,E. und Wulff, H.J.',
+            title: 'Tiefenkriterien',
+            journal: 'https://filmlexikon.uni-kiel.de/doku.php/t:tiefenkriterien-6315',
+            year: '(letzter Aufruf 29.05.2023)',
+        },
+        {
+            authors: 'Uni Heidelberg',
+            title: 'Monokulare Tiefenkriterien',
+            journal: 'https://www.psychologie.uni-heidelberg.de/ae/allg/lehre/wct/w/w6_raum/w620_monokulare_tk.htm',
+            year: '(letzter Aufruf 29.05.2023)',
         },
         // Add more sources as needed
     ];
@@ -40,9 +46,6 @@ export default function Sources() {
             {sources.map((source, index) => (
                 <Text key={index}>
                     {source.authors}. "{source.title}," <em>{source.journal}</em>
-                    {source.volume && `, vol. ${source.volume}`}
-                    {source.number && `, no. ${source.number}`}
-                    {source.pages && `, pp. ${source.pages}`}
                     {source.year && `, ${source.year}.`}
                 </Text>
             ))}

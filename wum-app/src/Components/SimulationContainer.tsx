@@ -2,8 +2,7 @@ import React from 'react';
 import { Row, Button, Card, Text, Spacer, Container } from '@nextui-org/react';
 import ThreeJsWindow from './ThreeJsWindow';
 
-export const SimulationContainer = ({ title, children }: { title: string, children: JSX.Element }) => {
-    const fliesstext = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tellus sem. Proin enim nisl, congue sit amet quam nec, pulvinar pretium tellus. In ac sem orci. Etiam suscipit quis ligula vitae eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi augue risus, ultricies et lectus ac, cursus gravida ex. Aenean sit amet bibendum leo, nec tempus ex.";
+export const SimulationContainer = ({ title, text, children }: { title: string, text: string, children: JSX.Element }) => {
 
     return (
         <Container>
@@ -22,12 +21,10 @@ export const SimulationContainer = ({ title, children }: { title: string, childr
                         {children}
                     </Container>
                     <Container >
-                        <Text b>{fliesstext}</Text>
+                        <Text b>{text}</Text>
                     </Container>
                 </Row>
-
             </Card>
-
         </Container >
     );
 }

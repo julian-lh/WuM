@@ -10,21 +10,22 @@ import Helligkeit from './Simulations/Helligkeit';
 import Horizont from './Simulations/Horizont';
 import Impressum from './Components/Impressum';
 import Sources from './Components/Sources';
-
+import Texts from './Assets/Text'
 
 function App() {
 
+  const content = Texts.texts;
   return (
     <NextUIProvider>
       <NavigationBar />
 
       <Spacer y={4} />
-      <SimulationContainer title='Verdeckung und Überlappung' ><Verdeckung /></SimulationContainer>
-      <SimulationContainer title='Schatten'><Schatten /></SimulationContainer>
-      <SimulationContainer title='Vertraute Größe'><Vertraut /></SimulationContainer>
-      <SimulationContainer title='Relative Helligkeit & Perspektivische Unschärfe'><Helligkeit /></SimulationContainer>
-      <SimulationContainer title='Texturdichte-Gradient'><Textur /></SimulationContainer>
-      <SimulationContainer title='Relative Höhe & Lage zum Horizont'><Horizont /></SimulationContainer>
+      <SimulationContainer title={content[0][0]} text={content[0][1]} ><Verdeckung /></SimulationContainer>
+      <SimulationContainer title={content[1][0]} text={content[1][1]} ><Schatten /></SimulationContainer>
+      <SimulationContainer title={content[2][0]} text={content[2][1]} ><Vertraut /></SimulationContainer>
+      <SimulationContainer title={content[3][0]} text={content[3][1]} ><Helligkeit /></SimulationContainer>
+      <SimulationContainer title={content[4][0]} text={content[4][1]} ><Textur /></SimulationContainer>
+      <SimulationContainer title={content[5][0]} text={content[5][1]} ><Horizont /></SimulationContainer>
       <section id='impressum'>
         <Impressum />
       </section>
