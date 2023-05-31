@@ -16,6 +16,8 @@ export const SimulationContainer = ({ title, children }: { title: string, childr
                 {title}
             </Text>
 
+            <Spacer y={1} />
+
             <Card variant="flat" css={{ height: "400px", backgroundColor: "#FFFFFF" }}>
                 <Row gap={2}>
                     <Container css={{ height: "400px" }} >

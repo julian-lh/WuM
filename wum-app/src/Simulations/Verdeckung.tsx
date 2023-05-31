@@ -7,7 +7,7 @@ function Sphere({ intensity, color1, radius, ...props }: { intensity: number, co
     return (
         <mesh {...props}>
             <sphereGeometry args={[radius, 20, 20]} />
-            < meshStandardMaterial color={color1 ? "blue" : "gray"} />
+            < meshStandardMaterial color={color1 ? "blue" : "magenta"} />
         </mesh>
     )
 }

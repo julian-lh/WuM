@@ -5,8 +5,8 @@ import { TextureLoader } from 'three';
 import { Html, useProgress } from '@react-three/drei';
 import { Button } from '@nextui-org/react';
 
-import chairImg from './chair.png'
-import houseImg from './house.png'
+import chairImg from '../Assets/chair.png'
+import houseImg from '../Assets/house.png'
 
 function Loader() {
     const { progress } = useProgress()
