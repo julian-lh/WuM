@@ -4,6 +4,7 @@
   "homepage": "https://julian-lh.github.io/WuM/",
   "private": true,
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.13",
     "@react-three/fiber": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
