@@ -2,7 +2,7 @@ import { useState, useMemo, Suspense } from 'react'
 import { Canvas, useLoader } from '@react-three/fiber'
 import * as THREE from 'three';
 import { TextureLoader } from 'three';
-import { Html, useProgress, Plane } from '@react-three/drei';
+import { Html, useProgress } from '@react-three/drei';
 import { Button } from '@nextui-org/react';
 
 import mountainsImg from '../Assets/mountains.png'
@@ -15,16 +15,12 @@ function Loader() {
 function Mountains({ brightness, ...props }: { brightness: number } & JSX.IntrinsicElements['mesh']) {
     const texture = useLoader(TextureLoader, mountainsImg);
     const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
-
-
-    material.color.setRGB(brightness, brightness, brightness);
-
     const geometry = new THREE.PlaneGeometry(8, 5);
 
+    material.color.setRGB(brightness, brightness, brightness);
     return (
         <mesh geometry={geometry} material={material} {...props} />
     );
-
 }
 
 export default function Helligkeit() {
@@ -36,7 +32,6 @@ export default function Helligkeit() {
 
     return (
         <center>
-
             <Canvas>
                 <Suspense fallback={<Loader />}>
                     <Mountains position={[-2, 0.5, -1]} brightness={intensity ** 1.5} />
