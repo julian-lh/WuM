@@ -3,6 +3,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { NavigationBar } from './Components/NavigationBar';
 import { SimulationContainer } from './Components/SimulationContainer';
 import Verdeckung from './Simulations/Verdeckung';
+import Textur from './Simulations/Textur';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
       <NavigationBar />
 
       <SimulationContainer title='Verdeckung und Überlappung' ><Verdeckung /></SimulationContainer>
-      <SimulationContainer title='comp 2'><p>test</p></SimulationContainer>
+      <SimulationContainer title='Textur'><Textur /></SimulationContainer>
     </NextUIProvider>
 
   );
