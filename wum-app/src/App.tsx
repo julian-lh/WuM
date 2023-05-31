@@ -7,6 +7,7 @@ import Schatten from './Simulations/Schatten';
 import Textur from './Simulations/Textur';
 import Vertraut from './Simulations/Vertraut';
 import Helligkeit from './Simulations/Helligkeit';
+import Horizont from './Simulations/Horizont';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <SimulationContainer title='Vertraute Größe'><Vertraut /></SimulationContainer>
       <SimulationContainer title='Relative Helligkeit & Perspektivische Unschärfe'><Helligkeit /></SimulationContainer>
       <SimulationContainer title='Texturdichte-Gradient'><Textur /></SimulationContainer>
-      <SimulationContainer title='Relative Höhe & Lage zum Horizont'><Vertraut /></SimulationContainer>
+      <SimulationContainer title='Relative Höhe & Lage zum Horizont'><Horizont /></SimulationContainer>
     </NextUIProvider>
 
   );
