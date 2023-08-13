@@ -1,2 +1,2 @@
 # WuM
-[Github Pages](https://julian-lh.github.io/WuM/)
+[Bereitgestellte Website zu monokularen Tiefenkriterien](https://julian-lh.github.io/WuM/)
